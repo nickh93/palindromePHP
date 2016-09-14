@@ -47,6 +47,36 @@
             $this->assertEquals($expected_output, $test_result);
 
         }
+
+        function test_MixedCaseAlphaNotPalindrome() {
+
+            //ARRANGE
+            $word_to_check = "trEaT";
+            $expected_output = false;
+            $palindrome_checker_instance = new PalindromeChecker($word_to_check);
+
+            //ACT
+            $test_result = $palindrome_checker_instance->checkIfPalindrome($word_to_check);
+
+            //ASSERT
+            $this->assertEquals($expected_output, $test_result);
+
+        }
+
+        function test_MixedCaseAlphaPalindrome() {
+
+            //ARRANGE
+            $word_to_check = "taCOcaT";
+            $expected_output = true;
+            $palindrome_checker_instance = new PalindromeChecker($word_to_check);
+
+            //ACT
+            $test_result = $palindrome_checker_instance->checkIfPalindrome($word_to_check);
+
+            //ASSERT
+            $this->assertEquals($expected_output, $test_result);
+
+        }
     }
 
 ?>

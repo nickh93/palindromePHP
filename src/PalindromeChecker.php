@@ -66,7 +66,7 @@
         {
             $reverse_word_to_check = $this->reverseString($word_to_check);
 
-            if ($reverse_word_to_check === $word_to_check) {
+            if (strtolower($reverse_word_to_check) === strtolower($word_to_check)) {
                 return true;
             }
             else {
