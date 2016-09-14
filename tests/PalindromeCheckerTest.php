@@ -77,6 +77,37 @@
             $this->assertEquals($expected_output, $test_result);
 
         }
+
+        function test_AllCharTypesNotPalindrome() {
+
+            //ARRANGE
+            $word_to_check = "t_+4343F";
+            $expected_output = false;
+            $palindrome_checker_instance = new PalindromeChecker($word_to_check);
+
+            //ACT
+            $test_result = $palindrome_checker_instance->checkIfPalindrome($word_to_check);
+
+            //ASSERT
+            $this->assertEquals($expected_output, $test_result);
+
+        }
+
+        function test_AllCharTypesPalindrome() {
+
+            //ARRANGE
+            $word_to_check = "T@c0c@t";
+            $expected_output = true;
+            $palindrome_checker_instance = new PalindromeChecker($word_to_check);
+
+            //ACT
+            $test_result = $palindrome_checker_instance->checkIfPalindrome($word_to_check);
+
+            //ASSERT
+            $this->assertEquals($expected_output, $test_result);
+
+        }
+
     }
 
 ?>
