@@ -29,7 +29,13 @@
 
         function checkIfPalindrome($word_to_check)
         {
-            return;
+            if (strlen($word_to_check) == 1) {
+                return true;
+            }
+            else {
+                return false;
+            }
+
         }
     }
 
