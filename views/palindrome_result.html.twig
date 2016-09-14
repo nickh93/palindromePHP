@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <title>Palindrome Result</title>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Palindrome Result</h2>
+
+            {% if is_palindrome %}
+
+                <h3> {{ checked_word }} is a palindrome.</h3>
+
+            {% else %}
+                <h3> {{ checked_word }} is not a palindrome.</h3>
+
+            {% endif %}
+
+            <form action="/">
+                <button type="submit">Go Back</button>
+            </form>
+
+        </div>
+    </body>
+</html>

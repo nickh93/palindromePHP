@@ -62,8 +62,9 @@
         }
 
 
-        function checkIfPalindrome($word_to_check)
+        function checkIfPalindrome()
         {
+            $word_to_check = $this->getCheckWord();
             $reverse_word_to_check = $this->reverseString($word_to_check);
 
             if (strtolower($reverse_word_to_check) === strtolower($word_to_check)) {
